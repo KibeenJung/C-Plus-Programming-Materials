@@ -1,0 +1,52 @@
+//입출력 예시 
+//입력:Fargo
+//입력:Cohen
+//입력:1996
+//입력:512
+//출력:Fargo by Cohen 1996 512 pages
+//출력:Fargo by Cohen -1 -1 pages
+//출력:book by author -1 -1 pages
+//출력:Cohen
+//출력:Cohen
+//출력:1996
+//출력:1996
+//출력:Fargo by Cohen 1996 512 pages
+//출력:Fargo by Cohen 1996 512 pages
+
+#include < iostream >
+#include < string >
+using namespace std;
+//함수 중복, default values
+
+class book{
+  string title, author;
+  int year, pages;
+public:
+  //여기에 코드 작성
+ 
+
+};
+
+//함수 작성.
+
+
+//아래 main함수는 수정 불가
+int main() {
+  string name;
+  string title;
+  int y,p;
+  cin >> title;
+  cin >> name;
+  cin >> y;
+  cin >> p;
+  book a(title, name, y, p);
+  book b(title, name);
+  book c;
+  a.print();
+  b.print();
+  c.print();
+  print_twice(name); //2번 출력
+  print_twice(y); //2번 출력
+  print_twice(a); //2번 출력
+  return 0;
+}

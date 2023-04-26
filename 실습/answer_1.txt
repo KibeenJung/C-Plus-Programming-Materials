@@ -1,0 +1,91 @@
+// 낆텧    덉떆 
+// 낅젰:Fargo
+// 낅젰:Cohen
+// 낅젰:1996
+// 낅젰:512
+//異쒕젰:Fargo by Cohen 1996 512 pages
+//異쒕젰:Fargo by Cohen -1 -1 pages
+//異쒕젰:book by author -1 -1 pages
+//異쒕젰:Cohen
+//異쒕젰:Cohen
+//異쒕젰:1996
+//異쒕젰:1996
+//異쒕젰:Fargo by Cohen 1996 512 pages
+//異쒕젰:Fargo by Cohen 1996 512 pages
+
+#include <iostream>
+#include <string>
+using namespace std;
+// ⑥닔 以묐났, default values
+
+class book{
+  string title, author;
+  int year, pages;
+public:
+    book(string t, string a, int y, int p)
+    {
+        title = t;
+        author = a;
+        year = y;
+        pages = p;
+    }
+    
+    book(string t, string a)
+    {
+        title = t;
+        author = a;
+        year = -1;
+        pages = -1;
+    }
+    
+    book()
+    {
+        title = "book";
+        author = "author";
+        year = -1;
+        pages = -1;
+    }
+    void print()
+    {
+        cout << title << " by " << author << " "  << year << " " << pages << " pages" << endl;
+    }
+};
+
+void print_twice(string name)
+{
+    cout << name << endl;
+    cout << name << endl;
+}
+
+void print_twice(int year)
+{
+    cout << year << endl;
+    cout << year << endl;
+}
+
+void print_twice(book a)
+{
+    a.print();
+    a.print();
+}
+
+// 꾨옒 main ⑥닔    섏젙 遺덇 
+int main() {
+  string name;
+  string title;
+  int y,p;
+  cin >> title;
+  cin >> name;
+  cin >> y;
+  cin >> p;
+  book a(title, name, y, p);
+  book b(title, name);
+  book c;
+  a.print();
+  b.print();
+  c.print();
+  print_twice(name); //2踰  異쒕젰
+  print_twice(y); //2踰  異쒕젰
+  print_twice(a); //2踰  異쒕젰
+  return 0;
+}
