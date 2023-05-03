@@ -1,0 +1,12 @@
+int asm_add(int a, int b)
+{
+	return a + b;
+}
+
+.global asm_add
+asm_add:
+	push{r4-r5, lr}
+	mov r4, r0
+	mov r5, r1
+	add r0, r4, r5
+	pop {r4-r5, pc}
