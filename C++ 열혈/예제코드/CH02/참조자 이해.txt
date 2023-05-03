@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int num = 12;
+	int num2 = 10;
+	int *ptr = &num;
+	int *ptr2 = &num2;
+	int **dptr = &ptr;
+	
+	int& ref = num;
+	int* (&pref) = ptr;
+	int** (&&dpref) = dptr;
+
+	pref = &num2;
+	dpref = &ptr2;
+
+	cout << *pref << endl;
+	cout << **dpref << endl;
+	return 0;
+}
