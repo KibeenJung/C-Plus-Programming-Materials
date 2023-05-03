@@ -1,0 +1,48 @@
+문제 1. 두 수의 값을 서로 바꾸는 swap 함수를 완성하라.
+
+// swap 함수 정의 구현
+
+void main(void)
+{
+	int a = 10, b = 20;
+	printf("Before: %d %d\n", a, b);
+	// swap 함수 호출 부 구현
+	rintf("After: %d %d\n", a, b);
+
+}
+
+출력:
+Before: 10 20
+After: 20 10
+
+
+문제 2. main 함수의 각 함수의 인자를 받는 매개변수 정의를 완성하시오.
+
+void f1(	p);
+void f2(	p);
+void f3(	p);
+
+void main(void)
+{
+	int (*p)[4];
+	f1(p);
+	f2(&p);
+	f3((*p)[1]);
+}
+
+문제 3. 다음 코드를 실행하고 출력을 작성하시오.
+
+#include <stdio.h>
+
+int main()
+{
+    int * ptr;
+    int arr[4];
+    ptr = arr;
+    
+    printf("sizeof of ptr : %ld\n", sizeof(ptr));
+    printf("sizeof of arr : %ld\n", sizeof(arr));
+    
+    return 0;
+}
+
