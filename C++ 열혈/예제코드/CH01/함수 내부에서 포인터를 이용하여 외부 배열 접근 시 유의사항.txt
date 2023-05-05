@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+struct st {
+    int arr[4];
+    int b;
+};
+
+void f1(int* p)
+{
+    p[4] = 10;
+}
+
+int main()
+{
+    struct st x;
+    x.b = 5;
+    
+    printf("%d\n", x.b);
+    f1(&(x.arr));
+    printf("%d\n", x.b);
+    
+    return 0;
+}
