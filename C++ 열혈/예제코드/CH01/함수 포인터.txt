@@ -1,0 +1,13 @@
+다음의 함수 f1은 메모리 주소 0xefcf2341에 위치하고 있다. 다음의 코드 실행 시 f_ptr이 저장하고 있는 값은 무엇인가?
+
+void f1(int a, int b)
+{
+	return a + b;
+}
+
+void main()
+{
+	void (*f_ptr)(int, int);
+	f_ptr = f1;
+	cout << f_fptr << endl;
+}
